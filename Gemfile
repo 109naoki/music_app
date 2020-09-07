@@ -38,9 +38,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~>4.0.0'
 gem 'mini_racer'
-
-gem 'bootstrap', '~> 4.0.0'
-gem 'mini_racer'
+gem 'carrierwave'
+gem 'rmagick'
 gem 'kaminari'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -56,6 +55,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'spring-commands-rspec'
+  gem 'pry-byebug'
 end
 
 group :test do

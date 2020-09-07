@@ -23,4 +23,16 @@ end
         expect(response.body).to include 'Boards | Music App'
       end
     end
+
+
+    # newページに行きhttpレスポンスが200で返されtitleにNew | Music Appが含まれること
+    context 'GET #new' do
+      before { get boards_new_path }
+      it 'responds successfully' do
+        expect(response).to have_http_status 200
+      end
+      it "has title 'Boards App'" do
+        expect(response.body).to include 'New | Music App'
+      end
+    end
   end

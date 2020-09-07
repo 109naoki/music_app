@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  get '/board', to: 'boards#index'
+  root 'boards#home'
+  get '/boards', to: 'boards#index'
 
 end

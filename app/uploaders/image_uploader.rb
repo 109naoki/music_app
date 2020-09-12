@@ -1,9 +1,8 @@
 class ImageUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
    include CarrierWave::RMagick
+   process resize_to_fill: [200, 200]
   # include CarrierWave::MiniMagick
-
-  
 
   # Choose what kind of storage to use for this uploader:
   storage :file
@@ -46,6 +45,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
+<<<<<<< HEAD
  
  # 画像の上限を640x480にする
  process :resize_to_limit => [640, 480]
@@ -88,4 +88,11 @@ class ImageUploader < CarrierWave::Uploader::Base
    model.instance_variable_get(var) or model.instance_variable_set(var, SecureRandom.uuid)
  end
 
+=======
+
+  # アップロード可能な拡張子のリスト
+  def extension_whitelist
+    %w(jpg jpeg gif png)
+  end
+>>>>>>> index_page
 end

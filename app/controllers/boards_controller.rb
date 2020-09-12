@@ -15,7 +15,7 @@ class BoardsController < ApplicationController
 
   def create
     Board.create(board_params)
-    binding.pry
+    
   end
 
   private

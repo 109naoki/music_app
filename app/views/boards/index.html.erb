@@ -1,10 +1,21 @@
 <% provide(:title, "Boards")%>
 
-<div class="d-flex align-items-center">
-  <h1>掲示板一覧</h1>
-  <div class="ml-auto boards__linkBox">
-    <a href="/boards/new" class="btn btn-outline-dark">新規作成</a>
+ 
+     
+<div class="row items" >
+<% @boards.each do |board| %>
+  <div class="card mb-4 shadow-sm item">
+    <%= image_tag board.image_url.to_s %>
+    <div class="card-body">
+     <p class="card-text"><%= board.body %></p>
+      <div class="btn-group">
+        <button type="button" class="btn btn-sm btn-outline-secondary">見る</button>
+        <button type="button" class="btn btn-sm btn-outline-secondary">編集</button>
+      </div>
+      <small class="text-muted">9分</small>
+    </div>
   </div>
+<<<<<<< HEAD
 </div>
 <table class="table table-hover boards__table">
   <thead class="thead-dark">
@@ -29,3 +40,7 @@
     <% end %>
   </tbody>
 </table>
+=======
+<% end %>
+</div>
+>>>>>>> index_page

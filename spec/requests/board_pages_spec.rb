@@ -27,7 +27,7 @@ end
 
     # newページに行きhttpレスポンスが200で返されtitleにNew | Music Appが含まれること
     context 'GET #new' do
-      before { get boards_new_path }
+      before { get new_board_path }
       it 'responds successfully' do
         expect(response).to have_http_status 200
       end

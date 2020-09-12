@@ -1,18 +1,21 @@
 <% provide(:title, "Boards")%>
 
  
-     
+ <%= link_to "新規投稿",new_board_path, class: "btn btn-outline-dark"%>    
 <div class="row items" >
 <% @boards.each do |board| %>
   <div class="card mb-4 shadow-sm item">
     <%= image_tag board.image_url.to_s %>
     <div class="card-body">
+    <p class="card-text"><%= board.name %></p>
      <p class="card-text"><%= board.body %></p>
+     <p class="card-text"><%= board.created_at.to_s(:datetime_jp) %></p>
       <div class="btn-group">
-        <button type="button" class="btn btn-sm btn-outline-secondary">見る</button>
+      <%=link_to "見る",board,class: "btn btn-sm btn-outline-secondary"%>
+        
         <button type="button" class="btn btn-sm btn-outline-secondary">編集</button>
       </div>
-      <small class="text-muted">9分</small>
+      
     </div>
   </div>
 <% end %>

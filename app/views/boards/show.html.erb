@@ -1,5 +1,6 @@
 <% provide(:title, "一覧")%>
 
+ <%= link_to "新規投稿",new_board_path, class: "btn btn-outline-dark"%>    
 <div class="row items" >
   <div class="card mb-4 shadow-sm item">
     <%= image_tag @board.image_url.to_s %>
@@ -11,3 +12,5 @@
     </div>
   </div>
 </div>
+
+

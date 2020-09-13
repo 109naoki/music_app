@@ -9,7 +9,7 @@ RSpec.describe Board, type: :model do
   it "is invalid without a title" do
      user = Board.new(title: nil)
      user.valid?
-     expect(user.errors[:title]).to include("can't be blank")
+     expect(user.errors[:body]).to include("can't be blank")
      end
   it "is invalid without a image" do
      user = Board.new(image: nil)

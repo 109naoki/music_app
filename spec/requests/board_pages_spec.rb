@@ -19,7 +19,7 @@ end
       it 'responds successfully' do
         expect(response).to have_http_status 200
       end
-      it "has title 'Boards App'" do
+      it "has title 'Boards Music App'" do
         expect(response.body).to include 'Boards | Music App'
       end
     end
@@ -31,8 +31,11 @@ end
       it 'responds successfully' do
         expect(response).to have_http_status 200
       end
-      it "has title 'Boards App'" do
+      it "has title 'New music App'" do
         expect(response.body).to include 'New | Music App'
       end
     end
   end
+
+
+  

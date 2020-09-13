@@ -12,10 +12,8 @@
      <p class="card-text"><%= board.created_at.to_s(:datetime_jp) %></p>
       <div class="btn-group">
       <%=link_to "見る",board,class: "btn btn-sm btn-outline-secondary"%>
-        
-        <button type="button" class="btn btn-sm btn-outline-secondary">編集</button>
+      <%= link_to "編集",edit_board_path(board),class: "btn btn-sm btn-outline-secondary"%>   
       </div>
-      
     </div>
   </div>
 <% end %>

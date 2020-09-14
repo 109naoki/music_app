@@ -47,6 +47,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '~> 3.8'
   gem "factory_bot_rails", "~> 4.10.0"
+  gem "rails-flog", require: "flog"
 end
 
 group :development do
@@ -58,6 +59,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'spring-commands-rspec'
   gem 'pry-byebug'
+  gem "annotate"
 end
 
 group :test do

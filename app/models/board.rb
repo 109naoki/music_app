@@ -1,4 +1,17 @@
+# == Schema Information
+#
+# Table name: boards
+#
+#  id         :bigint           not null, primary key
+#  body       :text(65535)
+#  image      :string(255)
+#  name       :string(255)
+#  title      :string(255)
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
 class Board < ApplicationRecord
+    has_many :comments
     mount_uploader :image, ImageUploader
     validates :name, presence: true, length: {maximum: 12}
     validates :body, presence: true

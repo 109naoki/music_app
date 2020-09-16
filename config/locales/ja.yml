@@ -6,6 +6,9 @@ ja:
           title: タイトル
           body: 本文
           image: 画像
+        comment:
+          comment: コメント
+          name: 名前
     views:
       pagination:
         first: 最初

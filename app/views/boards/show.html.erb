@@ -14,6 +14,10 @@
     </div>
   </div>
 </div>
-<%= render partial: "shared/comment_form"%>
+<div class= "p-comment__list">
+  <div class= "p-comment_listTitle" >みんなの感想一覧!</div>
+    <%= render @board.comments %>
+    </div>
+<%= render partial: "comments/form", locals: { comment: @comment} %>
 
 

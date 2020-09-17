@@ -1,8 +1,9 @@
 class BoardsController < ApplicationController
+
   before_action :set_target_board, only: %i[show edit update destroy]
 
   def index
-    @boards = Board.page(params[:page])
+    @boards = Board.all
   end
 
   def new
@@ -48,7 +49,7 @@ class BoardsController < ApplicationController
   private
 
   def board_params
-    params.require(:board).permit(:name, :image, :body)
+    params.require(:board).permit(:name, :image, :body, :user_id)
   end
 
   def set_target_board

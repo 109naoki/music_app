@@ -9,8 +9,10 @@
 #  title      :string(255)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  user_id    :integer
 #
 class Board < ApplicationRecord
+    belongs_to:user
     has_many :comments
     mount_uploader :image, ImageUploader
     validates :name, presence: true, length: {maximum: 12}

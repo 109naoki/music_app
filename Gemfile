@@ -42,6 +42,9 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'kaminari'
 gem "rails-i18n"
+gem 'devise'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -60,6 +63,7 @@ group :development do
   gem 'spring-commands-rspec'
   gem 'pry-byebug'
   gem "annotate"
+  gem 'letter_opener_web'  
 end
 
 group :test do

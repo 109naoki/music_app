@@ -1,4 +1,5 @@
 @import "bootstrap";
-@import "boards";
-@import "comments";
-@import "users";
+@import "layouts/navbar";
+@import "common";
+@import "users/devise";
+@import "users/show";

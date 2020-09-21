@@ -3,18 +3,13 @@
 # Table name: users
 #
 #  id                     :bigint           not null, primary key
-#  confirmation_sent_at   :datetime
-#  confirmation_token     :string(255)
-#  confirmed_at           :datetime
 #  email                  :string(255)      default(""), not null
 #  encrypted_password     :string(255)      default(""), not null
-#  image                  :string(255)
-#  name                   :string(255)
-#  profile                :text(65535)
+#  name                   :string(255)      default(""), not null
+#  profile_photo          :string(255)
 #  remember_created_at    :datetime
 #  reset_password_sent_at :datetime
 #  reset_password_token   :string(255)
-#  unconfirmed_email      :string(255)
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #
@@ -26,14 +21,8 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  mount_uploader :image, ImageUploader
-  
   devise :database_authenticatable, :registerable,
-  :recoverable, :rememberable, :validatable, :confirmable
+         :recoverable, :rememberable, :validatable
 
-  validates :name, presence: true 
-  validates :profile, length: { maximum: 200 } 
-
-  
-  
+         validates :name, presence: true, length: { maximum: 50 }
 end

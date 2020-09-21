@@ -1,3 +1,6 @@
-<% provide(:title, "Home")%>
+<% if user_signed_in? %> <%# この行を追加する %>
+  <%= link_to "サインアウト", destroy_user_session_path, method: :delete %>
+<% end %> <%# この行を追加する %>
 
-<h1>このページは説明ページです</h1>
+<p>このページは仮のトップページです。</p>
+<%= link_to "仮のボタンです", "#", class: "btn btn-primary" %>

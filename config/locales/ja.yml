@@ -1,18 +1,11 @@
 ja:
     activerecord:
       attributes:
+        user:
+          name: ユーザー名
+          password: パスワード
+          password_confirmation: パスワード（確認）
         board:
           name: 名前
           title: タイトル
           body: 本文
-          image: 画像
-        comment:
-          comment: コメント
-          name: 名前
-    views:
-      pagination:
-        first: 最初
-        last: 最後
-        previous: 前
-        next: 次
-        truncate: ...

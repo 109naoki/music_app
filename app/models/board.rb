@@ -16,8 +16,12 @@
 #
 #  fk_rails_...  (user_id => users.id)
 #
-require 'rails_helper'
+class Board < ApplicationRecord
+  belongs_to :user
+  has_many :photos, dependent: :destroy
 
-RSpec.describe Board, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  
+  accepts_nested_attributes_for :photos
+
+   
 end

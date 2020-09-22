@@ -1,23 +1,23 @@
 # == Schema Information
 #
-# Table name: boards
+# Table name: photos
 #
 #  id         :bigint           not null, primary key
-#  caption    :string(255)
+#  image      :string(255)      not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  user_id    :bigint           not null
+#  board_id   :bigint           not null
 #
 # Indexes
 #
-#  index_boards_on_user_id  (user_id)
+#  index_photos_on_board_id  (board_id)
 #
 # Foreign Keys
 #
-#  fk_rails_...  (user_id => users.id)
+#  fk_rails_...  (board_id => boards.id)
 #
 require 'rails_helper'
 
-RSpec.describe Board, type: :model do
+RSpec.describe Photo, type: :model do
   pending "add some examples to (or delete) #{__FILE__}"
 end

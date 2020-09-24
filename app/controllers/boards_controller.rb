@@ -1,4 +1,6 @@
 class BoardsController < ApplicationController
+  # skip_before_action :method_name, raise: false
+
     before_action :authenticate_user!
     before_action :set_board, only: %i(show destroy)
 

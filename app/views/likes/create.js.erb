@@ -1,0 +1,4 @@
+$('#like-icon-post-<%= @board.id.to_s %>').
+  html('<%= link_to "いいね", board_like_path(@board.id, @like), method: :DELETE, remote: true, class: "loved hide-text" %>');
+$('#like-text-post-<%= @board.id.to_s %>').
+  html('<%= j render "boards/like_text", { likes: @board.likes } %>');

@@ -19,8 +19,7 @@
 #  fk_rails_...  (board_id => boards.id)
 #  fk_rails_...  (user_id => users.id)
 #
-FactoryBot.define do
-  factory :comment do
-    
-  end
+class Comment < ApplicationRecord
+    belongs_to :user
+    belongs_to :board
 end

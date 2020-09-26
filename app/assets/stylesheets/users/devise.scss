@@ -22,7 +22,7 @@
   }
   
   .logo-img {
-    background-image: image-url("logo.png");
+    background-image: image-url("logo_music.png");
     background-repeat: no-repeat;
     height: 56px;
     width: 180px;
@@ -60,10 +60,13 @@
   }
 
   #error_explanation {
-  　
     color: red;
     ul {
       color: red;
       margin: 0 0 30px 0;
     }
+  }
+
+  .profile-edit{
+    margin-top: 20px;
   }

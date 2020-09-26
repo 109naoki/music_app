@@ -26,7 +26,6 @@ class Board < ApplicationRecord
   accepts_nested_attributes_for :photos
   
   def liked_by(current_user)
-    
     Like.find_by(user_id: current_user.id, board_id: id)
   end
 end

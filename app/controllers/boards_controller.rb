@@ -5,8 +5,8 @@ class BoardsController < ApplicationController
     before_action :set_board, only: %i(show destroy)
 
     def index
-     @boards = Board.limit(10).includes(:photos, :user).order("created_at DESC")
-    end
+      @boards = Board.order(created_at: :desc).page(params[:page]).per(5)
+      end
 
     def new
         @board = Board.new
@@ -37,6 +37,7 @@ class BoardsController < ApplicationController
         end
         redirect_to root_path
       end
+
 
     private
        def board_params

@@ -26,6 +26,7 @@ module App
     config.generators.system_tests = nil
     config.time_zone =  "Tokyo"
     config.i18n.default_locale = :ja
+    require "active_storage/engine"
 
   end
 end

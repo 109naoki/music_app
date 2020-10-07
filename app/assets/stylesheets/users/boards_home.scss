@@ -14,11 +14,12 @@ body {
 @media screen and (max-width: 479px) {
 
   body {
-    font-size: 16px;
+    font-size: 20px;
 
   }
 
   .wrapper {
+
     margin: 0 auto;
     padding: 0 4%;
   }
@@ -55,13 +56,15 @@ body {
 
     .page-header h1 {
       margin-bottom: 10px;
+
     }
   }
 
   /*メイン画面*/
   .home-content {
     text-align: center;
-    margin-top: 160px;
+    margin-top: 130px;
+    border-bottom: 1px solid #000;
 
     h2 {
       color: #fff;
@@ -69,7 +72,7 @@ body {
 
     p {
       color: #fff;
-      margin: 10px 0 42px;
+      margin: 10px 0 42px 0;
     }
 
     .btn {
@@ -77,19 +80,34 @@ body {
       width: 90px;
       color: #fff;
       border-radius: 5px;
+      margin-bottom: 40px;
     }
   }
 
   /*説明概要*/
   .content-about {
-    h1 {
-      font-size: 16px;
+    margin-top: 30px;
+    text-align: center;
+
+    .bish_logo {
+      width: 200px;
+      border: 1px solid #000;
+      margin-bottom: 20px;
     }
 
-    p {
-      color: black;
+
+
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+    .focus {
+      font-size: 16px;
     }
   }
+
 
 
 }
@@ -97,8 +115,112 @@ body {
 
 /*iPadの設定*/
 @media screen and (min-width: 600px) {
-  h1 {
+  body {
     font-size: 20px;
 
   }
+
+  .wrapper {
+
+    margin: 0 auto;
+    padding: 0 4%;
+  }
+
+  /*メイン画面の背景画像*/
+  .big-bg {
+    background-size: cover;
+    background-position: center top;
+
+  }
+
+  .home {
+    background-image: image-url("live-music.jpg");
+    height: 325px;
+  }
+
+  .home .page-title {
+    text-transform: none;
+  }
+
+
+  .container {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+
+  }
+
+  .header-logo {
+    .logo {
+      width: 150px;
+    }
+
+    .page-header h1 {
+      margin-bottom: 10px;
+
+    }
+  }
+
+  /*メイン画面*/
+  .home-content {
+    text-align: center;
+    margin-top: 130px;
+    border-bottom: 1px solid #000;
+
+    h2 {
+      color: #fff;
+    }
+
+    p {
+      color: #fff;
+      margin: 10px 0 42px 0;
+    }
+
+    .btn {
+      background-color: #00aaff;
+      width: 90px;
+      color: #fff;
+      border-radius: 5px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .focus-title {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+
+  /*説明概要*/
+  .content-about {
+    br {
+      display: none;
+    }
+
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-row: 300px 300px;
+
+    .bish_logo {
+
+      width: 200px;
+      border: 1px solid #000;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+
+    .focus {
+      grid-column: 2/2;
+      grid-row: 2/2;
+      font-size: 16px;
+    }
+  }
+
 }

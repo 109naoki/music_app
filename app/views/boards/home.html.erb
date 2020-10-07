@@ -14,13 +14,16 @@
       <p><%= link_to "登録する", new_user_registration_path,class:"btn" %></p>
      <div>
 </div>
+</div>
 <%# 説明概要　%>
-<div class="content-about wrapper">
- <h1>MusicAppとは?</h1>
- <h1><%= image_tag 'logo_music.png',class:"logo" %><h1>
- <p>他のユーザのおすすめアーティストを共有できいいね!やコメントを残すことができます</p>
+
+<h2 class="focus-title">MusicAppとは?</h2>
+<div class="content-about">
+
+ <h1><%= image_tag 'home.png',class:"bish_logo" %></h1>
+
+ <p class="focus">他のユーザのおすすめアーティストを共有でき<br>いいね!やコメントを残すことができます</p>
 </div>
 
-
-</div>
 <%= render 'partial/footer' %>
+</div>

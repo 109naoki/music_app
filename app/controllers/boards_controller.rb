@@ -1,16 +1,24 @@
 class BoardsController < ApplicationController
   # skip_before_action :method_name, raise: false
 
-    before_action :authenticate_user!
+    before_action :authenticate_user!,except: [:home]
     before_action :set_board, only: %i(show destroy)
+
+
+    def home
+
+
+    end
 
     def index
       @boards = Board.order(created_at: :desc).page(params[:page]).per(5)
       end
 
     def new
+
         @board = Board.new
         @board.photos.build
+
     end
 
       def create
@@ -26,7 +34,7 @@ class BoardsController < ApplicationController
       end
 
       def show
-        
+
       end
 
       def destroy

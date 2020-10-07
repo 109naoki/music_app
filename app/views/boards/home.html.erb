@@ -1,0 +1,26 @@
+<div class="container">
+<div class="header-logo">
+<header class="page-header">
+      <h1><%= image_tag 'logo_music.png',class:"logo" %><h1>
+</header>
+</div>
+
+
+<%# メイン画面　%>
+<div class="home big-bg">
+  <div class="home-content wrapper">
+      <h2 class="page-title">Welcome Musicgram!</h2>
+      <p>あなたのおすすめのアーティストを共有しよう!</p>
+      <p><%= link_to "登録する", new_user_registration_path,class:"btn" %></p>
+     <div>
+</div>
+<%# 説明概要　%>
+<div class="content-about wrapper">
+ <h1>MusicAppとは?</h1>
+ <h1><%= image_tag 'logo_music.png',class:"logo" %><h1>
+ <p>他のユーザのおすすめアーティストを共有できいいね!やコメントを残すことができます</p>
+</div>
+
+
+</div>
+<%= render 'partial/footer' %>

@@ -6,9 +6,8 @@
     <div class="card-wrap">
       <div class="card">
         <div class="card-header align-items-center d-flex">
-          <%= link_to user_path(board.user), class: "no-text-decoration" do %>
-            <%= image_tag avatar_url(board.user), class: "post-profile-icon" %>
-          <% end %>
+
+
           <%= link_to user_path(board.user), class: "black-color no-text-decoration",
             title: board.user.name do %>
             <strong><%= board.user.name %></strong>
@@ -49,7 +48,7 @@
             <span><strong><%= board.user.name %></strong></span>
             <span><%= board.caption %></span>
             <%= link_to time_ago_in_words(board.created_at).upcase + "前", board_path(board), class: "post-time no-text-decoration" %>
-            
+
             <%# ==========ここから編集する========== %>
             <div id="comment-post-<%= board.id.to_s %>">
               <%= render 'comment_list', { board: board } %>
@@ -74,3 +73,4 @@
 <% end %>
 
 <%= paginate @boards %>
+<%= render 'partial/footer' %>

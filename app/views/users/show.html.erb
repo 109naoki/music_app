@@ -38,20 +38,20 @@
 <div class="profile-wrap">
   <div class="row">
     <div class="col-md-4 text-center">
-     <% if @user.avatar.attached? %> 
-      <%= image_tag (@user.avatar),class: "round-img" %> 
-      <% else %> 
-     <%= image_tag avatar_url(@user), class: "round-img" %>   
-      <% end %> 
+     <% if @user.avatar.attached? %>
+      <%= image_tag (@user.avatar),class: "round-img" %>
+      <% else %>
+     <%= image_tag avatar_url(@user), class: "round-img" %>
+      <% end %>
     </div>
     <div class="col-md-8">
       <div class="row">
         <h1><%= @user.name %></h1>
-        
-        
-        <% if @user == current_user %>        
+
+
+        <% if @user == current_user %>
           <%= link_to "プロフィールを編集", edit_user_registration_path, class: "btn btn-outline-dark edit-profile-btn" %>
-          <button type="button" class="setting" data-toggle="modal" data-target="#exampleModal"></button>         
+          <button type="button" class="setting" data-toggle="modal" data-target="#exampleModal"></button>
         <% end %>
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
@@ -75,10 +75,12 @@
    <% if @user == current_user %>
     <h5 class="mt-0"><%= @user.email %></h5>
     <% end %>
-    <p class="profile-edit"><%= @user.profile %></p>   
-    
+    <p class="profile-edit"><%= @user.profile %></p>
+
   </div>
       </div>
     </div>
   </div>
 </div>
+
+<%= render 'partial/footer' %>

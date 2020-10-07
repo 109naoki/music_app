@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+// 共通設定
+html {
+  font-size: 100%;
+}
+
+body {
+  line-height: 1.7;
+
+}
+
+/*iPhoneの共通設定*/
+@media screen and (max-width: 479px) {
+
+  body {
+    font-size: 16px;
+
+  }
+
+  .wrapper {
+    margin: 0 auto;
+    padding: 0 4%;
+  }
+
+  /*メイン画面の背景画像*/
+  .big-bg {
+    background-size: cover;
+    background-position: center top;
+
+  }
+
+  .home {
+    background-image: image-url("live-music.jpg");
+    height: 325px;
+  }
+
+  .home .page-title {
+    text-transform: none;
+  }
+
+
+  .container {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+
+  }
+
+  .header-logo {
+    .logo {
+      width: 150px;
+    }
+
+    .page-header h1 {
+      margin-bottom: 10px;
+    }
+  }
+
+  /*メイン画面*/
+  .home-content {
+    text-align: center;
+    margin-top: 160px;
+
+    h2 {
+      color: #fff;
+    }
+
+    p {
+      color: #fff;
+      margin: 10px 0 42px;
+    }
+
+    .btn {
+      background-color: #00aaff;
+      width: 90px;
+      color: #fff;
+      border-radius: 5px;
+    }
+  }
+
+  /*説明概要*/
+  .content-about {
+    h1 {
+      font-size: 16px;
+    }
+
+    p {
+      color: black;
+    }
+  }
+
+
+}
+
+
+/*iPadの設定*/
+@media screen and (min-width: 600px) {
+  h1 {
+    font-size: 20px;
+
+  }
+}

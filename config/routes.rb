@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
   
+  root 'boards#home'
   
   devise_for :users, 
     controllers: { registrations: 'registrations' } 
 
-    root 'boards#index'
+    
+    get 'boards',to: "boards#index"
 
     post 'follow/:id' => 'relationships#follow', as: 'follow' # フォローする
     post 'unfollow/:id' => 'relationships#unfollow', as: 'unfollow' # フォロー外す

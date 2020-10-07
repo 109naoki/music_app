@@ -38,11 +38,11 @@
 <div class="profile-wrap">
   <div class="row">
     <div class="col-md-4 text-center">
-    <% if @user.avatar.attached? %>
-     <%= image_tag @user.avatar,class: "round-img" %>
-     <% else %>
+     <% if @user.avatar.attached? %> 
+      <%= image_tag (@user.avatar),class: "round-img" %> 
+      <% else %> 
      <%= image_tag avatar_url(@user), class: "round-img" %>   
-     <% end %>
+      <% end %> 
     </div>
     <div class="col-md-8">
       <div class="row">

@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+// 共通設定
+html {
+  font-size: 100%;
+}
+
+body {
+  line-height: 1.7;
+
+}
+
+/*iPhoneの共通設定*/
+@media screen and (max-width: 479px) {}

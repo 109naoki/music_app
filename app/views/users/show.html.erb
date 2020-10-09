@@ -11,11 +11,12 @@
     </div>
     <div class="col-md-8 user-center">
       <div class="row">
-        <h1><%= @user.name %></h1>
+        <h1 class="user-name"><%= @user.name %></h1>
+        <p class="profile-edit"><%= @user.profile %></p>
 
 
         <% if @user == current_user %>
-          <%= link_to "プロフィールを編集", edit_user_registration_path, class: "btn btn-outline-dark edit-profile-btn" %>
+          <h1 class="user-profile-edit"><%= link_to "プロフィールを編集", edit_user_registration_path, class: "btn btn-outline-dark edit-profile-btn" %></h1>
           <button type="button" class="setting" data-toggle="modal" data-target="#exampleModal"></button>
         <% end %>
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -36,11 +37,51 @@
         </div>
       </div>
 
+
+<p><%= "フォロー数: #{@user.follower.count}" %></p>
+<p><%= "フォロワー数: #{@user.followed.count}" %></p>
+<% unless @user == current_user %>
+  <% if current_user.following?(@user) %>
+    <%= link_to 'フォロー外す', unfollow_path(@user.id), method: :POST %>
+  <% else %>
+    <%= link_to 'フォローする', follow_path(@user.id), method: :POST %>
+  <% end %>
+<% end %>
+
+<div class= "follow-container">
+<div class="follow-count">
+<h3 class="follow-one">フォロー一覧</h3>
+  <% @user.following_user.where.not(id: current_user.id).each do |user| %>
+    <p>
+
+      <% if current_user.following?(user) %>
+        <%= link_to 'フォロー外す', unfollow_path(user.id), method: :POST %>
+      <% else %>
+        <%= link_to 'フォローする', follow_path(user.id), method: :POST %>
+      <% end %>
+      <%= link_to "プロフィールページ", user_path(user) %>
+    </p>
+  <% end %>
+<h3>フォロワー一覧</h3>
+  <% @user.follower_user.where.not(id: current_user.id).each do |user| %>
+    <p>
+      <%= "id: #{user.id} email: #{user.email}" %>
+      <% if current_user.following?(user) %>
+        <%= link_to 'フォロー外す', unfollow_path(user.id), method: :POST %>
+      <% else %>
+        <%= link_to 'フォローする', follow_path(user.id), method: :POST %>
+      <% end %>
+      <%= link_to "ユーザを見る", user_path(user) %>
+    </p>
+  <% end %>
+  </div>
+</div>
+
   <div class="media-body">
-   <% if @user == current_user %>
-    <h5 class="mt-0"><%= @user.email %></h5>
-    <% end %>
-    <p class="profile-edit"><%= @user.profile %></p>
+
+
+
+
 
   </div>
       </div>

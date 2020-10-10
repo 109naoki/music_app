@@ -35,8 +35,6 @@
     width: 200px;
   }
 
-
-
   .setting {
     background-image: image-url("parts4.png");
     background-repeat: no-repeat;
@@ -58,11 +56,24 @@
     font-size: 18px;
   }
 
+  .follow-container {
+    display: flex;
+
+    padding-left: 0;
+
+    li {
+      margin-top: 15px;
+      font-size: 16px;
+      list-style: none;
+      justify-content: space-between;
+      font-weight: bold;
+    }
+
+    .follow-right {
+      margin-right: 20px;
+    }
+  }
 }
-
-
-
-
 
 /*PCの設定*/
 @media screen and (min-width: 767px) {

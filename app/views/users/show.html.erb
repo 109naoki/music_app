@@ -37,9 +37,10 @@
         </div>
       </div>
 
-
-<p><%= "フォロー数: #{@user.follower.count}" %></p>
-<p><%= "フォロワー数: #{@user.followed.count}" %></p>
+<ul class="follow-container">
+<li class="follow-right"><%= "フォロー: #{@user.follower.count}" %></li>
+<li class="follow-left"><%= "フォロワー: #{@user.followed.count}" %></li>
+</ul>
 <% unless @user == current_user %>
   <% if current_user.following?(@user) %>
     <%= link_to 'フォロー外す', unfollow_path(@user.id), method: :POST %>
@@ -48,8 +49,8 @@
   <% end %>
 <% end %>
 
-<div class= "follow-container">
-<div class="follow-count">
+
+
 <h3 class="follow-one">フォロー一覧</h3>
   <% @user.following_user.where.not(id: current_user.id).each do |user| %>
     <p>
@@ -74,8 +75,8 @@
       <%= link_to "ユーザを見る", user_path(user) %>
     </p>
   <% end %>
-  </div>
-</div>
+
+
 
   <div class="media-body">
 

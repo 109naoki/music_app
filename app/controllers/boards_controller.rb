@@ -25,10 +25,10 @@ class BoardsController < ApplicationController
         @board = Board.new(board_params)
         if @board.photos.present?
           @board.save
-          redirect_to root_path
+          redirect_to boards_path
           flash[:notice] = "投稿が保存されました"
         else
-          redirect_to root_path
+          redirect_to boards_path
           flash[:alert] = "投稿に失敗しました"
         end
       end
@@ -43,7 +43,7 @@ class BoardsController < ApplicationController
         else
             flash[:alert] = "投稿の削除に失敗しました"
         end
-        redirect_to root_path
+        redirect_to boards_path
       end
 
 

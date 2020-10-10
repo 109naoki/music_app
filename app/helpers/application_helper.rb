@@ -15,4 +15,18 @@ module ApplicationHelper
       gravatar_id = Digest::MD5::hexdigest(user.email).downcase
       "https://www.gravatar.com/avatar/#{gravatar_id}.jpg"
     end
+
+    def devise_error_messages
+    return "" if resource.errors.empty?
+    html = ""
+    # エラーメッセージ用のHTMLを生成
+    messages = resource.errors.full_messages.each do |msg|
+      html += <<-EOF
+        <ul class="error_field " >
+          <li class="error_msg">#{msg}</li>
+        </ul>
+      EOF
+    end
+    html.html_safe
+  end
   end

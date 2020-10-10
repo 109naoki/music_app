@@ -24,9 +24,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   has_one_attached :avatar
   has_many :comments
-
   has_many :likes
-
   has_many :boards, dependent: :destroy
 
   has_many :follower, class_name: "Relationship", foreign_key: "follower_id", dependent: :destroy # フォロー取得
@@ -34,7 +32,7 @@ class User < ApplicationRecord
 
   has_many :following_user, through: :follower, source: :followed # 自分がフォローしている人
   has_many :follower_user, through: :followed, source: :follower # 自分をフォローしている人
-  
+
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
@@ -42,16 +40,16 @@ class User < ApplicationRecord
          validates :name, presence: true, length: { maximum: 50 }
          validates :profile,length: { maximum: 200 }
          validates :email, presence: true
-         
+
 
          def update_without_current_password(params, *options)
           params.delete(:current_password)
-      
+
           if params[:password].blank? && params[:password_confirmation].blank?
             params.delete(:password)
             params.delete(:password_confirmation)
           end
-      
+
           result = update_attributes(params, *options)
           clean_up_passwords
           result
@@ -70,5 +68,5 @@ class User < ApplicationRecord
         # フォローしていればtrueを返す
         def following?(user)
         following_user.include?(user)
-        end  
+        end
    end

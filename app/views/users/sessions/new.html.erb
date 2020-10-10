@@ -14,15 +14,15 @@
           <%= f.password_field :password, autocomplete: "off", placeholder: "パスワード", class: "form-control" %>
         </div>
 
-        <div class="actions">
-          <%= f.submit "サインインする", class: "btn btn-primary w-100" %>
+        <div class="action">
+          <%= f.submit "サインインする", class: "btn btn-primary w-50" %>
         </div>
       <% end %>
 
       <br>
 
       <p class="devise-link">
-        アカウントをお持ちでないですか？
+        アカウントをお持ちでないですか？<br>
         <%= link_to "登録する", new_user_registration_path %>
       </p>
 

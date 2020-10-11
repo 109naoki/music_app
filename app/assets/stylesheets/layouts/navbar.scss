@@ -3,6 +3,8 @@
     background-color: #fff;
     border-bottom: 1px solid rgba(0, 0, 0, .0975);
     height: 77px;
+    width: 480px;
+    margin-bottom: 70px;
 
     &__brand {
       height: 35px;
@@ -32,17 +34,18 @@
 
         .profile-icon {
           background-image: image-url("parts3.png");
-          margin-left: 275px;
+          margin-left: 375px;
         }
       }
     }
   }
 
-  .btn-primary {
-    margin-left: 287px;
-    margin-top: 5px;
 
 
+  .btn-sm {
+    margin-left: 395px;
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
 
   .follow-container {
@@ -66,6 +69,7 @@
     background-color: #fff;
     border-bottom: 1px solid rgba(0, 0, 0, .0975);
     height: 77px;
+    margin-bottom: 40px;
 
     &__brand {
       height: 35px;
@@ -99,4 +103,5 @@
       }
     }
   }
+
 }

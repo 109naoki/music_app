@@ -1,49 +1,100 @@
-.post-profile-icon {
+@media screen and (max-width: 479px) {
+
+  .post-profile-icon {
     height: 40px;
     width: 40px;
     border-radius: 50%;
     margin-right: 10px;
   }
-  
+
   .card-wrap {
-    margin: 40px 0px;
+     margin-top: 40px;
+     margin-bottom: 40px;
+
   }
-  
+
+  .mx-auto {
+    margin-top: 30px;
+
+  }
+
+  .card{
+    margin-top: 55px;
+
+
+  }
+  #like-text-post-1{
+    font-size: 17px;
+    margin-right: 35px;
+  }
+  .user-caption-board{
+    margin-top: 10px;
+    text-align: left;
+     font-size: 17px;
+     margin-bottom: 5px;
+  }
+  .comment-board{
+    text-align: left;
+    font-size: 17px;
+  }
+
+  .post-card{
+    width:360px;
+  }
+  .form-control{
+    font-size: 17px;
+
+  }
+  .file-form{
+    font-size: 12px;
+    margin-right: 20px;
+  }
+
+
+
+
+
+
+
+
+
   .no-text-decoration:hover {
     text-decoration: none;
   }
-  
+
   .black-color {
     color: #262626;
   }
-  
+
   .parts {
     margin: 12px 0;
   }
-  
+
+
   .love {
     background-image: image-url("parts5");
     background-repeat: no-repeat;
-    height: 36px;
-    width: 36px;
-    background-size: 36px !important;
+    height: 33px;
+    width: 33px;
+    background-size: 30px !important;
   }
-  
+
   .comment {
+    margin-bottom: 5px;
     margin-left: 8px;
     background-image: image-url("parts6");
     background-repeat: no-repeat;
-    height: 36px;
-    width: 36px;
-    background-size: 40px !important;
+    height: 30px;
+    width: 33px;
+    background-size: 35px !important;
   }
-  
+
   .post-time {
-    margin:0;
-    color:#999;
-    font-size:10px;
+    margin: 0;
+    color: #999;
+    font-size: 10px;
   }
-  
+
   .post-sub-text {
     text-decoration: none;
     color: #262626;
@@ -52,29 +103,29 @@
   .post-wrap .col-md-8 {
     padding: 0px;
   }
-  
+
   .card-right {
     padding: 20px;
   }
-  
+
   .card-right-name {
     padding-bottom: 10px;
     border-bottom: 1px solid #e6e6e6;
     display: flex;
   }
-  
+
   .card-right-comment {
     padding-bottom: 10px;
     border-bottom: 1px solid #e6e6e6;
     height: 320px;
     overflow: auto;
   }
-  
+
   .postShow-wrap {
     border: 1px solid #e6e6e6;
     margin: 40px;
   }
-  
+
   .post-user-name {
     display: flex;
     align-items: center;
@@ -98,7 +149,7 @@
     width: 36px;
     background-size: 36px !important;
   }
-  
+
   .hide-text {
     display: block;
     overflow: hidden;
@@ -117,18 +168,168 @@
   }
 
   /*ページネーション自体のデザイン*/
-.pagination>li>a {          
+  .pagination>li>a {
+    border: none;
+    /*枠線をなくす*/
+    color: #696969;
+    /*文字の色を変える*/
+  }
+
+  /* 表示しているページ番号のデザイン */
+  .pagination>.active>a {
+    background: #93c9ff;
+    /*背景の色を変える*/
+    border-radius: 15px;
+    /*角を丸くする*/
+  }
+
+  /*ホバー時のデザイン*/
+  .pagination>li>a:hover {
+    border-radius: 15px;
+    /*角を丸くする*/
+  }
+
+  .btn-form{
+    margin-right: 120px;
+    margin-left: 0;
+  }
+
+}
+
+@media screen and (min-width: 490px) {
+.post-profile-icon {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  .card-wrap {
+    margin: 40px 0px;
+
+  }
+
+  .no-text-decoration:hover {
+    text-decoration: none;
+  }
+
+  .black-color {
+    color: #262626;
+  }
+
+  .parts {
+    margin: 12px 0;
+  }
+
+  .love {
+    background-image: image-url("parts5");
+    background-repeat: no-repeat;
+    height: 36px;
+    width: 36px;
+    background-size: 36px !important;
+  }
+
+  .comment {
+    margin-left: 8px;
+    background-image: image-url("parts6");
+    background-repeat: no-repeat;
+    height: 36px;
+    width: 36px;
+    background-size: 40px !important;
+  }
+
+  .post-time {
+    margin:0;
+    color:#999;
+    font-size:10px;
+  }
+
+  .post-sub-text {
+    text-decoration: none;
+    color: #262626;
+  }
+
+  .post-wrap .col-md-8 {
+    padding: 0px;
+  }
+
+  .card-right {
+    padding: 20px;
+  }
+
+  .card-right-name {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+    display: flex;
+  }
+
+  .card-right-comment {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+    height: 320px;
+    overflow: auto;
+  }
+
+  .postShow-wrap {
+    border: 1px solid #e6e6e6;
+    margin: 40px;
+  }
+
+  .post-user-name {
+    display: flex;
+    align-items: center;
+    line-height: 0;
+  }
+
+  .delete-post-icon {
+    background-image: image-url("parts9");
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    background-size: 20px !important;
+    color: #262626;
+    font-size: 20px;
+  }
+
+  .loved {
+    background-image: image-url("parts7");
+    background-repeat: no-repeat;
+    height: 36px;
+    width: 36px;
+    background-size: 36px !important;
+  }
+
+  .hide-text {
+    display: block;
+    overflow: hidden;
+    text-indent: 110%;
+    white-space: nowrap;
+  }
+
+  .delete-comment {
+    background-image: image-url("parts8");
+    background-repeat: no-repeat;
+    width: 11px;
+    height: 11px;
+    float: right;
+    margin: 5px 0 0 10px;
+    background-size: 11px !important;
+  }
+
+  /*ページネーション自体のデザイン*/
+.pagination>li>a {
   border: none;     /*枠線をなくす*/
   color: #696969;   /*文字の色を変える*/
 }
 
 /* 表示しているページ番号のデザイン */
-.pagination>.active>a {     
+.pagination>.active>a {
   background: #93c9ff;     /*背景の色を変える*/
   border-radius: 15px;     /*角を丸くする*/
 }
 
 /*ホバー時のデザイン*/
-.pagination>li>a:hover {        
+.pagination>li>a:hover {
   border-radius: 15px;    /*角を丸くする*/
+}
 }

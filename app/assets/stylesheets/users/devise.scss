@@ -1,10 +1,10 @@
 /*iPhoneの共通設定*/
 @media screen and (max-width: 479px) {
   .main {
-    max-width: 960px;
+    max-width: 460px;
 
     width: 90%;
-    padding: 100px 75px 100px;
+    margin-left: 10px;
     display: block;
     flex: 1;
     flex-basis: auto;
@@ -13,13 +13,14 @@
   }
 
   .devise-card {
-    text-align: center;
+
     border: none;
-    width: 350px;
+    width: 300px;
   }
 
   .card {
-     margin-right: 10px;
+    margin-left: 20px;
+   text-align: center;
   }
 
   .form-wrap {
@@ -79,7 +80,7 @@
 }
 
 /*PCの設定*/
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 490px) {
   .main {
     max-width: 960px;
     margin: 0 auto;

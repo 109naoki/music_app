@@ -2,7 +2,7 @@
 
 
 <% @boards.each do |board| %>
-  <div class="col-md-8 col-md-2 mx-auto">
+  <div class="col-md-8 col-md-2 mx-auto mx-coloum">
     <div class="card-wrap">
       <div class="card">
         <div class="card-header align-items-center d-flex">
@@ -22,9 +22,9 @@
 
         </div>
 
-        <%= link_to(board_path(board)) do %>
+
           <%= image_tag board.photos.first.image.url(:medium), class: "card-img-top" %>
-        <% end %>
+
 
         <div class="card-body">
           <div class="row parts">
@@ -45,16 +45,18 @@
           </div>
 
           <div>
-            <span><strong><%= board.user.name %></strong></span>
-            <span><%= board.caption %></span>
+          <div class="user-caption-board">
+            <span class="user-name-board"><strong><%= board.user.name %></strong></span>
+            <span class="board-caption"><%= board.caption %></span>
             <%= link_to time_ago_in_words(board.created_at).upcase + "前", board_path(board), class: "post-time no-text-decoration" %>
-
-            <%# ==========ここから編集する========== %>
+          </div>
+           <div class="comment-board">
             <div id="comment-post-<%= board.id.to_s %>">
               <%= render 'comment_list', { board: board } %>
             </div>
             <%= link_to time_ago_in_words(board.created_at).upcase + "前", board_path(board),
               class: "light-color post-time no-text-decoration" %>
+              </div>
             <hr>
             <div class="row actions" id="comment-form-post-<%= board.id.to_s %>">
               <%= form_with model: [board, Comment.new], class: "w-100" do |f| %>
@@ -63,7 +65,7 @@
                 <%= f.text_field :comment, class: "form-control comment-input border-0", placeholder: "コメント ...", autocomplete: :off %>
               <% end %>
             </div>
-            <%# ==========ここまで編集する========== %>
+
 
           </div>
         </div>

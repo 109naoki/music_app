@@ -1,21 +1,38 @@
 //iphoneの設定
 @media screen and (max-width: 479px) {
-  .user-name {
+ .user-name {
     font-size: 20px;
     margin-top: 15px;
-    margin-left: 80px;
+    margin-left: 65px;
   }
 
-  .user-profile-edit {
-    margin-right: 90px;
+  .user-name-row-profile{
+
+    margin-right: 60px;
+
   }
+
+  .user-name-row-editprofile{
+   margin-right: 40px;
+  }
+
+  .profile-edit-user{
+    margin-right: 200px;
+  }
+
 
   .profile-wrap {
     margin: 40px 0px;
     margin-left: 30px;
   }
 
+  .col-md-4{
+    margin-top: 50px;
+  }
+
+
   .round-img {
+    margin-right: 20px;
     border-radius: 50%;
     width: 120px;
     height: 120px;
@@ -25,15 +42,16 @@
     margin-left: 100px;
   }
 
+
   .edit-profile-btn {
-    margin: 15px 0 0 15px;
+    margin: 15px 120px 0 0;
     font-weight: bold;
     height: 26px;
     line-height: 26px;
     padding: 0 26px;
     border-color: #dbdbdb;
     font-size: 14px;
-    width: 200px;
+    width: 180px;
   }
 
   .setting {
@@ -42,9 +60,10 @@
     height: 24px;
     width: 24px;
     background-color: transparent;
-    margin: 18px 0 0 100px;
+    margin: 18px 0 0 80px;
     background-size: 22px !important;
     border: none;
+
 
     &:hover {
       cursor: pointer;
@@ -59,11 +78,13 @@
 
   .follow-container {
     display: flex;
+    margin-right: 100px;
 
     padding-left: 0;
 
-    li {
-      margin-top: 15px;
+    h1 {
+
+      margin-top: 35px;
       font-size: 16px;
       list-style: none;
       justify-content: space-between;
@@ -71,7 +92,11 @@
     }
 
     .follow-right {
+
       margin-right: 20px;
+    }
+    .follow-left{
+      margin-right: 120px;
     }
   }
 }
@@ -81,15 +106,27 @@
   .profile-wrap {
     margin: 40px 0px;
   }
+  .user-name {
+    font-size: 24px;
+    margin-top: 40px;
+    margin-left: 500px;
+  }
+
+  .user-name-row-editprofile {
+    margin-left: 420px;
+    margin-top: 15px;
+  }
 
   .round-img {
+    margin-left: 450px;
+    margin-top: 40px;
     border-radius: 100%;
-    width: 180px;
-    height: 180px;
+    width: 140px;
+    height: 140px;
   }
 
   .edit-profile-btn {
-    margin: 15px 0 0 15px;
+    margin: 0 0 0 440px;
     font-weight: bold;
     height: 26px;
     line-height: 26px;
@@ -99,18 +136,36 @@
   }
 
   .setting {
+
     background-image: image-url("parts4.png");
     background-repeat: no-repeat;
     height: 24px;
     width: 24px;
     background-color: transparent;
-    margin: 18px 0 0 10px;
+    margin: 20px 0 0 125px;
     background-size: 22px !important;
     border: none;
 
     &:hover {
       cursor: pointer;
     }
+  }
+  h1 {
+
+    margin-top: 35px;
+    font-size: 16px;
+    list-style: none;
+    justify-content: space-between;
+    font-weight: bold;
+  }
+
+  .follow-right {
+
+    margin-right: 20px;
+  }
+
+  .follow-left {
+    margin-right: 120px;
   }
 
 

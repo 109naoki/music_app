@@ -58,15 +58,11 @@
     }
   }
 
-  .user-profile-edit-link {
-
-
-    width:350px;
-  }
 
   .profile-edit {
      margin-top: 15px;
-    margin-right: 180px;
+    margin-right: 245px;
+    margin-left: 15px;
 
     font-size: 18px;
   }
@@ -96,12 +92,13 @@
       margin-right: 120px;
     }
   }
-  footer{
-    margin-right: 170px;
-  }
+
   .follow-link{
     margin-top: 20px;
     margin-right: 270px;
+  }
+  footer{
+    text-align: center;
   }
 
 
@@ -110,30 +107,36 @@
 
 /*PCの設定*/
 @media screen and (min-width: 767px) {
-  .profile-wrap {
-    margin: 40px 0px;
-  }
+
   .user-name {
-    font-size: 24px;
-    margin-top: 40px;
-    margin-left: 500px;
+    text-align: center;
+    font-size: 28px;
+    margin-top: 205px;
+    margin-left: 130px;
   }
 
-  .user-name-row-editprofile {
-    margin-left: 420px;
+
+  .profile-edit {
+    width: 200px;
     margin-top: 15px;
+    margin-right: 425px;
+    margin-left: 95px;
+    font-size: 24px;
   }
+
+
 
   .round-img {
+    margin-bottom: 30px;
     margin-left: 450px;
-    margin-top: 40px;
+    margin-top: 45px;
     border-radius: 100%;
     width: 140px;
     height: 140px;
   }
 
   .edit-profile-btn {
-    margin: 0 0 0 440px;
+    margin: 0 0 0 70px;
     font-weight: bold;
     height: 26px;
     line-height: 26px;
@@ -146,33 +149,48 @@
 
     background-image: image-url("parts4.png");
     background-repeat: no-repeat;
-    height: 24px;
-    width: 24px;
+    height: 44px;
+    width: 44px;
     background-color: transparent;
-    margin: 20px 0 0 125px;
-    background-size: 22px !important;
+    margin: 30px 480px 20px 150px;
+    background-size: 32px !important;
     border: none;
 
     &:hover {
       cursor: pointer;
     }
   }
-  h1 {
+ .follow-container {
+   display: flex;
+   margin-right: 120px;
 
-    margin-top: 35px;
-    font-size: 16px;
-    list-style: none;
-    justify-content: space-between;
-    font-weight: bold;
-  }
+   padding-left: 0;
 
-  .follow-right {
+   h1 {
 
-    margin-right: 20px;
-  }
+     margin-top: 15px;
+     font-size: 26px;
+     list-style: none;
+     justify-content: space-between;
+     font-weight: bold;
 
-  .follow-left {
-    margin-right: 120px;
-  }
+   }
 
+   .follow-right {
+     width:120px;
+     margin-right: 10px;
+   }
+
+   .follow-left {
+     width:135px;
+     margin-right: 120px;
+   }
+ }
+
+ .follow-link {
+
+   margin-top: 30px;
+   margin-right: 240px;
+   margin-left: 90px;
+ }
 }

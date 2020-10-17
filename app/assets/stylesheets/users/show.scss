@@ -3,23 +3,8 @@
  .user-name {
     font-size: 20px;
     margin-top: 15px;
-    margin-left: 65px;
+    margin-left: 45px;
   }
-
-  .user-name-row-profile{
-
-    margin-right: 60px;
-
-  }
-
-  .user-name-row-editprofile{
-   margin-right: 40px;
-  }
-
-  .profile-edit-user{
-    margin-right: 200px;
-  }
-
 
   .profile-wrap {
     margin: 40px 0px;
@@ -32,7 +17,7 @@
 
 
   .round-img {
-    margin-right: 20px;
+    margin-right: 190px;
     border-radius: 50%;
     width: 120px;
     height: 120px;
@@ -42,9 +27,11 @@
     margin-left: 100px;
   }
 
-
+.user-profile-edit{
+  margin-right: 60px;
+}
   .edit-profile-btn {
-    margin: 15px 120px 0 0;
+    margin: 15px 195px 0 0;
     font-weight: bold;
     height: 26px;
     line-height: 26px;
@@ -55,12 +42,13 @@
   }
 
   .setting {
+   margin-right: 120px;
     background-image: image-url("parts4.png");
     background-repeat: no-repeat;
     height: 24px;
     width: 24px;
     background-color: transparent;
-    margin: 18px 0 0 80px;
+    margin: 25px 100px 0 55px;
     background-size: 22px !important;
     border: none;
 
@@ -70,15 +58,22 @@
     }
   }
 
+  .user-profile-edit-link {
+
+
+    width:350px;
+  }
+
   .profile-edit {
-    text-align: center;
-    width: 200px;
+     margin-top: 45px;
+    margin-right: 180px;
+
     font-size: 18px;
   }
 
   .follow-container {
     display: flex;
-    margin-right: 100px;
+    margin-right: 120px;
 
     padding-left: 0;
 
@@ -89,16 +84,28 @@
       list-style: none;
       justify-content: space-between;
       font-weight: bold;
+
     }
 
     .follow-right {
-
-      margin-right: 20px;
+      width: 70px;
+      margin-right: 10px;
     }
     .follow-left{
+      width: 80px;
       margin-right: 120px;
     }
   }
+  footer{
+    margin-right: 170px;
+  }
+  .follow-link{
+    margin-top: 20px;
+    margin-right: 270px;
+  }
+
+
+
 }
 
 /*PCの設定*/
@@ -167,6 +174,5 @@
   .follow-left {
     margin-right: 120px;
   }
-
 
 }

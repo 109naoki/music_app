@@ -33,11 +33,10 @@ class User < ApplicationRecord
   has_many :following_user, through: :follower, source: :followed # 自分がフォローしている人
   has_many :follower_user, through: :followed, source: :follower # 自分をフォローしている人
 
-
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-         validates :name, presence: true, length: { maximum: 50 }
+
          validates :profile,length: { maximum: 200 }
          validates :email, presence: true
 
@@ -53,6 +52,13 @@ class User < ApplicationRecord
           result = update_attributes(params, *options)
           clean_up_passwords
           result
+        end
+
+         def self.guest
+         find_or_create_by!(email: 'guest@example.com') do |user|
+         user.password = SecureRandom.urlsafe_base64
+        # user.confirmed_at = Time.now  # Confirmable を使用している場合は必要
+         end
         end
 
         # ユーザーをフォローする

@@ -34,6 +34,9 @@
         アカウントをお持ちですか？<br>
         <%= link_to "サインインする", new_user_session_path %>
       </p>
+      <p class="devise-link">
+      <%= link_to 'ゲストログイン', users_guest_sign_in_path, method: :post %>
+      </p>
     </div>
   </div>
 </div>

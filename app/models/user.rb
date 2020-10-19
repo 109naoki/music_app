@@ -22,10 +22,13 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  validates :name,length: { maximum: 6 }
+
   has_one_attached :avatar
   has_many :comments
   has_many :likes
   has_many :boards, dependent: :destroy
+
 
   has_many :follower, class_name: "Relationship", foreign_key: "follower_id", dependent: :destroy # フォロー取得
   has_many :followed, class_name: "Relationship", foreign_key: "followed_id", dependent: :destroy # フォロワー取得

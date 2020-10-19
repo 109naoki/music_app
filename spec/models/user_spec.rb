@@ -27,19 +27,24 @@ RSpec.describe User do
     expect(FactoryBot.build(:user)).to be_valid
   end
 
-  # 名前がなければ無効な状態であること
-  it "is invalid without a name" do
-    user = FactoryBot.build(:user, name: nil)
-    user.valid?
-    expect(user.errors[:name]).to include("を入力してください")
-  end
-
   #メールアドレスが無ければ無効な状態であること
   it "is invalid without an email address" do
     user = FactoryBot.build(:user, email: nil)
     user.valid?
     expect(user.errors[:email]).to include("を入力してください")
   end
+  #メールアドレスが50文字以内であれば有効であること
+  it "Valid if the email address is 50 characters or less" do
+    user = FactoryBot.build(:user, email: "#{"a" * 38}@example.com")
+    expect(user).to be_valid
+  end
+  #メールアドレスが51文字以上であれば無効であること
+  it "If the email address is 51 characters or more, it is invalid" do
+    user = FactoryBot.build(:user, email: "#{"a" * 39}@example.com")
+    user.valid?
+    expect(user.errors[:email]).to include("は50文字以内で入力してください")
+    end
+
   #パスワードが無ければ無効な状態であること
   it "is invalid without an email password" do
     user = FactoryBot.build(:user, password: nil)
@@ -48,9 +53,20 @@ RSpec.describe User do
   end
   # ユーザーの名前を文字列として返すこと
   it "return a use's name as a string" do
-    user = FactoryBot.build(:user, name: "John")
-    expect(user.name).to eq "John"
+    user = FactoryBot.build(:user, name: "Bob")
+    expect(user.name).to eq "Bob"
   end
+  # ユーザーの名前が8字以内であれば有効であること
+  it "Valid if the user's name is 8 characters or less" do
+      user = FactoryBot.build(:user, name: "a" * 7)
+      expect(user).to be_valid
+    end
+ # ユーザーの名前が9字以上であれば無効であること
+    it "Invalid if the user's name is 8 characters or more" do
+      user = FactoryBot.build(:user, name: "a" * 9)
+      user.valid?
+      expect(user.errors[:name]).to include("は8文字以内で入力してください")
+    end
 
   # 重複したメールアドレスなら無効な状態であること
   it "is invalid with a dupulicate email address" do

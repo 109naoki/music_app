@@ -22,5 +22,27 @@
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:user) { FactoryBot.create(:user) }
+  let(:board) { FactoryBot.create(:board) }
+  let(:comment) { FactoryBot.create(:comment) }
+
+  # 有効なファクトリを持つこと
+  it "Have a valid factroy" do
+    expect(FactoryBot.build(:comment)).to be_valid
+  end
+
+  # user_idがあればコメントが有効であること
+  it "Must user_id " do
+    expect(comment).to be_valid
+  end
+  # user_idが無ければコメントが無効であること
+  it "Invalid without user ID" do
+   comment.user_id = nil
+   expect(comment).to be_invalid
+  end
+  # commentが25文字以内であれば投稿できること
+     it "Within 25 characters" do
+     comment = FactoryBot.build(:comment, comment: "a"* 25)
+     expect(comment).to be_valid
+     end
 end

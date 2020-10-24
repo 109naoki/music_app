@@ -17,6 +17,7 @@
 #  fk_rails_...  (user_id => users.id)
 #
 class Board < ApplicationRecord
+  validates :caption, presence: true, length:{ maximum: 15}
   has_one_attached :avatar
   belongs_to :user
   has_many :photos, dependent: :destroy

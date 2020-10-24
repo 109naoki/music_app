@@ -33,11 +33,13 @@ RSpec.describe User do
     user.valid?
     expect(user.errors[:email]).to include("を入力してください")
   end
+
   #メールアドレスが50文字以内であれば有効であること
   it "Valid if the email address is 50 characters or less" do
     user = FactoryBot.build(:user, email: "#{"a" * 38}@example.com")
     expect(user).to be_valid
   end
+
   #メールアドレスが51文字以上であれば無効であること
   it "If the email address is 51 characters or more, it is invalid" do
     user = FactoryBot.build(:user, email: "#{"a" * 39}@example.com")
@@ -51,6 +53,18 @@ RSpec.describe User do
     user.valid?
     expect(user.errors[:password]).to include("を入力してください")
   end
+
+  # パスワードが6文字以上であれば有効であること
+  it "Must be valid if the password is 6 characters or more" do
+      user = FactoryBot.build(:user, password: "a" * 6)
+      expect(user).to be_valid
+    end
+  # パスワードが5文字以内だと無効であること
+    it "The password is invalid if it is within 5 characters" do
+      user = FactoryBot.build(:user, password: "a" * 5)
+      user.valid?
+      expect(user.errors[:password]).to include("は6文字以上で入力してください")
+    end
   # ユーザーの名前を文字列として返すこと
   it "return a use's name as a string" do
     user = FactoryBot.build(:user, name: "Bob")
@@ -75,5 +89,7 @@ RSpec.describe User do
     user.valid?
     expect(user.errors[:email]).to include("はすでに存在します")
   end
+
+
 
 end

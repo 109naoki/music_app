@@ -21,6 +21,8 @@
 #
 FactoryBot.define do
   factory :comment do
-    
+    comment "いいですね!"
+    association :user
+    association :board
   end
 end

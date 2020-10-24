@@ -17,7 +17,10 @@
 #  fk_rails_...  (user_id => users.id)
 #
 FactoryBot.define do
-  factory :board do
-    
+ factory :board do
+ caption "こんにちは"
+ association :user
+
+
   end
-end
+ end

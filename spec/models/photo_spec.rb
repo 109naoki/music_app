@@ -17,7 +17,8 @@
 #  fk_rails_...  (board_id => boards.id)
 #
 require 'rails_helper'
-
 RSpec.describe Photo, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
-end
+    it "有効なファクトリを持つこと" do
+      expect(FactoryBot.build(:photo)).to be_valid
+    end
+  end

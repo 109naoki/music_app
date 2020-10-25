@@ -20,7 +20,7 @@
 #  fk_rails_...  (user_id => users.id)
 #
 class Comment < ApplicationRecord
-    validates :comment,length: { maximum: 25 }
+    validates :comment, presence: true, length:{ maximum: 15}
     belongs_to :user
     belongs_to :board
 end

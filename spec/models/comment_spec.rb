@@ -40,9 +40,19 @@ RSpec.describe Comment, type: :model do
    comment.user_id = nil
    expect(comment).to be_invalid
   end
-  # commentが25文字以内であれば投稿できること
-     it "Within 25 characters" do
-     comment = FactoryBot.build(:comment, comment: "a"* 25)
+  # commentが15文字以内であれば投稿できること
+     it "Within 15 characters" do
+     comment.comment = "a" * 15
      expect(comment).to be_valid
      end
+  # commentが16文字以上であれば投稿できないこと
+     it "If the comment is 16 characters or more, it is invalid" do
+     comment.comment = "a" * 16
+     expect(comment).to be_invalid
+     end
+  # commentがなければ無効であること
+  it "Invalid widhout commnet" do
+    comment.comment = nil
+    expect(comment).to be_invalid
+  end
 end

@@ -2,6 +2,30 @@ require 'rails_helper'
 
  RSpec.describe BoardsController, type: :controller do
 
+
+    describe "#home" do
+        # 認証済みのユーザとして
+        context "as an authenticated user" do
+           before do
+           @user = FactoryBot.create(:user)
+        end
+
+        #正常にレスポンスを返すこと
+        it "responds successfully" do
+            sign_in @user
+            get :home
+            expect(response).to be_successful
+        end
+
+        # 200レスポンスを返すこと
+        it "returns a 200 response" do
+            sign_in @user
+            get :home
+            expect(response).to have_http_status "200"
+        end
+    end
+ end
+
     describe "#index" do
         # 認証済みのユーザとして
         context "as an authenticated user" do

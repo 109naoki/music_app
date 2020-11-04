@@ -9,8 +9,8 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
     get 'boards',to: "boards#index"
-    post 'follow/:id' => 'relationships#follow', as: 'follow' # フォローする
-    post 'unfollow/:id' => 'relationships#unfollow', as: 'unfollow' # フォロー外す
+    post 'follow/:id' => 'relationships#follow', as: 'follow'
+    post 'unfollow/:id' => 'relationships#unfollow', as: 'unfollow'
     get '/users/:id', to: 'users#show', as: 'user'
 
     resources :boards, only: %i(new create index show destroy) do

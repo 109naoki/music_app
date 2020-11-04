@@ -39,7 +39,7 @@ require 'rails_helper'
 end
 
 
-
+    #    boards_new
         describe "#new" do
         # 認証済みのユーザとして
         context "as an authenticated user" do
@@ -72,6 +72,30 @@ end
         # サイン画面にリダイレクトすること
         it "redirects to the sign-in page"do
             get :new
+            expect(response).to redirect_to "/users/sign_in"
+        end
+    end
+ end
+
+
+    #    boards_create
+        describe "#create" do
+        # 認証済みのユーザとして
+        context "as an authenticated user" do
+           before do
+           @user = FactoryBot.create(:user)
+        end
+    end
+         # ゲストとして
+    context "as a guest" do
+        # 302レスポンスを返すこと
+        it "returns a 302 response" do
+            get :create
+            expect(response).to have_http_status "302"
+        end
+        # サイン画面にリダイレクトすること
+        it "redirects to the sign-in page"do
+            get :create
             expect(response).to redirect_to "/users/sign_in"
         end
     end

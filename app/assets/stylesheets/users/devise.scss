@@ -75,6 +75,18 @@
   li{
     list-style: none;
   }
+  .board-caption{
+    font-size: 12px;
+  }
+  .comment_size{
+   font-size: 12px;
+  }
+
+  .pagination {
+    justify-content: center;
+  }
+
+
 
 
 }
@@ -95,6 +107,8 @@
   .devise-card {
     border: none;
   }
+
+
 
   .form-wrap {
     max-width: 400px;
@@ -139,6 +153,10 @@
   .error_field{
    font-size: 16px;
    color: red;
+  }
+
+  .pagination {
+    justify-content: center;
   }
 
 

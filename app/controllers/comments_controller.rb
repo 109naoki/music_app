@@ -10,8 +10,7 @@ class CommentsController < ApplicationController
           flash[:alert] = "コメントに失敗しました"
         end
       end
-    
-      
+
       def destroy
         @comment = Comment.find_by(id: params[:id])
         @board = @comment.board
@@ -21,11 +20,10 @@ class CommentsController < ApplicationController
           flash[:alert] = "コメントの削除に失敗しました"
         end
       end
-      
-    
+
+
       private
         def comment_params
           params.required(:comment).permit(:user_id, :board_id, :comment)
         end
     end
-

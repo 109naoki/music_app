@@ -1,6 +1,6 @@
 class RelationshipsController < ApplicationController
 
-    def follow
+      def follow
         current_user.follow(params[:id])
         redirect_to user_path
         flash[:notice] = "フォローが完了しました"
@@ -11,4 +11,4 @@ class RelationshipsController < ApplicationController
         redirect_to user_path
         flash[:notice] = "フォロー解除が完了しました"
       end
-end
+  end

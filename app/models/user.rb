@@ -25,7 +25,6 @@ class User < ApplicationRecord
   validates :name,length: { maximum: 8 }
   validates :email,length: { maximum: 50 }
 
-
   has_one_attached :avatar
   has_many :comments
   has_many :likes

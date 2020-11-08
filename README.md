@@ -1,24 +1,3 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Music-app
+就職活動用のポートフォリオとして制作した自作アプリです。 自分の好きなアーティストを他のユーザーと共有出来ます。
+開発環境に Docker、インフラに AWS を使用しています。

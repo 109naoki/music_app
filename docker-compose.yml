@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   web:
     build: .
@@ -16,7 +16,6 @@ services:
     volumes:
       - db-volume:/var/lib/mysql
     environment:
-      MYSQL_ROOT_PASSWORD: nao
+      MYSQL_ROOT_PASSWORD: password
 volumes:
   db-volume:
-

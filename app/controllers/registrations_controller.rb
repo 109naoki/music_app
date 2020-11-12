@@ -1,5 +1,7 @@
 class RegistrationsController < Devise::RegistrationsController
+ def new
 
+ end
     protected
     def update_resource(resource, params)
       resource.update_without_current_password(params)

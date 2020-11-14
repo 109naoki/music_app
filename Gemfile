@@ -5,7 +5,7 @@ ruby '2.5.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
-gem "kaminari"
+
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.4.4', '< 0.6.0'
 # Use Puma as the app server
@@ -64,7 +64,7 @@ group :development do
   gem 'spring-commands-rspec'
   gem 'pry-byebug'
   gem "annotate"
-  gem 'letter_opener_web'  
+  gem 'letter_opener_web'
 end
 
 group :test do
@@ -73,8 +73,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
-  gem 'rspec-rails', '~> 3.8'
-   gem 'pry-rails'
+  gem 'pry-rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

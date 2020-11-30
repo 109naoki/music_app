@@ -4,7 +4,7 @@
 ・'Rails 5.2.2'　<br>
 ・'MySQL 5.7.26'　<br>
 ・ JavaScript <br>
-・ AWS (cloud9,VPC,EC2,S3,RDS,Route53,ELB,ACM,IAM,S3)
+・ AWS (cloud9,VPC,EC2,S3,RDS,Route53,ELB,ACM,IAM,S3)<br>
 ・'本番環境 ： AWS Elastic beanstalk'<br>
 ・'テスト : Rspec'<br>　
 ・'開発環境 : Docker'<br>　

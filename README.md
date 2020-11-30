@@ -1,7 +1,7 @@
 技術記事投稿アプリ
 
-・'Ruby 2.6.5'　
-・'Rails 5.0'　
+・'Ruby 2.6.5'　<br>
+・'Rails 5.0'　<br>
 'MySQL 5.5.62'　
 '本番環境 ： AWS Elastic beanstalk'　
 'CI ： CircleCI'　

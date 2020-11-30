@@ -7,7 +7,7 @@
 ・ AWS (cloud9,VPC,EC2,S3,RDS,Route53,ELB,ACM,IAM,S3)<br>
 ・'本番環境 ： AWS Elastic beanstalk'<br>
 ・'テスト : Rspec'<br>　
-・'開発環境 : Docker'<br>　
+・'開発環境 : Docker'　
 
 ### 機能一覧
 ・ユーザー登録・編集・削除<br>
